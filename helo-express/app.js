@@ -12,6 +12,8 @@ app.set('view engine', 'ejs')
 //Setup Routes
 app.use(router);
 
+//Setup helpers
+app.locals.noteAge = require('./util/helpers.js').noteAge
 
 
 module.exports = app
