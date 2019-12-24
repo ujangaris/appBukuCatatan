@@ -14,6 +14,14 @@ function getAll() {
     return NOTES;
 }
 
+function add(data) {
+    const newData = data;
+    newData['id'] = NOTES.length - 1;
+    NOTES.push(newData);
+    return NOTES;
+}
+
 module.exports = {
-    getAll: getAll
+    getAll: getAll,
+    add: add
 }
